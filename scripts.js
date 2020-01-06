@@ -23,12 +23,11 @@ window.onload = function(){
 	  })
 	  .then((showJson) => {
 	    let sortedShows = showJson.Items.map(
-	    	obj => new Show(obj.Ttla.Line2, obj.ImageUrls[0].ImageUrl,obj.Ttla.Line1, obj.TvRating) 
-	    	)
+	    	obj => new Show(obj.Ttla.Line2, obj.ImageUrls[0].ImageUrl,obj.Ttla.Line1, obj.TvRating) )
 
 	    // populate first template
 	    document.getElementsByTagName('img')[0].src = sortedShows[0].imgUrl
-	    document.getElementsByClassName('show-title')[0].textContent = sortedShows[0].title
+	    document.getElementsByClassName('show-title')[0].textContent = `"` + sortedShows[0].title + `"`
 	    document.getElementsByClassName('show-artist')[0].textContent = sortedShows[0].artist
 	    document.getElementsByClassName('show-rating')[0].textContent = sortedShows[0].rating
 	  })
