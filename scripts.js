@@ -36,15 +36,19 @@ function populateHtml(sortedShows){
 	sortedShows.forEach(
 		(obj, index) => {
 			if (index === 0){
-				document.getElementsByTagName('img')[0].src = sortedShows[0].imgUrl
-		    document.getElementsByClassName('show-title')[0].textContent = `"` + sortedShows[0].title + `"`
-		    document.getElementsByClassName('show-artist')[0].textContent = sortedShows[0].artist
-		    document.getElementsByClassName('show-rating')[0].textContent = sortedShows[0].rating
+				document.getElementsByTagName('img')[0].src = obj.imgUrl
+		    document.getElementsByClassName('show-title')[0].textContent = `"` + obj.title + `"`
+		    document.getElementsByClassName('show-artist')[0].textContent = obj.artist
+		    document.getElementsByClassName('show-rating')[0].textContent = obj.rating
 			} else {
 				let cardTemplate = document.getElementsByClassName('card')[0].cloneNode(true)
 				let cards = document.getElementsByClassName('cards')
 
 				cards[cards.length - 1].appendChild(cardTemplate)
+				document.getElementsByTagName('img')[index].src = obj.imgUrl
+		    document.getElementsByClassName('show-title')[index].textContent = `"` + obj.title + `"`
+		    document.getElementsByClassName('show-artist')[index].textContent = obj.artist
+		    document.getElementsByClassName('show-rating')[index].textContent = obj.rating
 			}
 		}
 	)
