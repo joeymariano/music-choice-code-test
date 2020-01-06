@@ -1,5 +1,4 @@
-// create Show class
-// contains title imgUrl artist and rating
+// create Show class - contains title imgUrl artist and rating
 // API call to data.json on window load
 // parse data and organize with Show class
 // populate template information with info from first show
