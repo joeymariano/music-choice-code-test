@@ -18,6 +18,13 @@ body {
 	border-style: solid;
 	border-width: 2px;
 	margin: 20px 0 20px 0;
+
+}
+
+.card:hover {
+  border-color: #0099ff;
+  -webkit-transition: border-color 1s; /* Safari prior 6.1 */
+  transition: border-color 1s;
 }
 
 .show-image {
