@@ -30,21 +30,21 @@ window.onload = function(){
 }
 
 function populateHtml(sortedShows){
-	// populate first template
-
-
 	sortedShows.forEach(
 		(obj, index) => {
 			if (index === 0){
+				// populate first template
 				document.getElementsByTagName('img')[0].src = obj.imgUrl
 		    document.getElementsByClassName('show-title')[0].textContent = `"` + obj.title + `"`
 		    document.getElementsByClassName('show-artist')[0].textContent = obj.artist
 		    document.getElementsByClassName('show-rating')[0].textContent = obj.rating
 			} else {
+				// clone first card
 				let cardTemplate = document.getElementsByClassName('card')[0].cloneNode(true)
 				let cards = document.getElementsByClassName('cards')
-
+				// add template
 				cards[cards.length - 1].appendChild(cardTemplate)
+				// populate information
 				document.getElementsByTagName('img')[index].src = obj.imgUrl
 		    document.getElementsByClassName('show-title')[index].textContent = `"` + obj.title + `"`
 		    document.getElementsByClassName('show-artist')[index].textContent = obj.artist
@@ -52,5 +52,4 @@ function populateHtml(sortedShows){
 			}
 		}
 	)
-
 }

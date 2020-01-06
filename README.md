@@ -1,7 +1,7 @@
 # How to Run
 - npm i http-server
 - npx http-server
-- navigate to localhost:8080/index
+- navigate to localhost:8080
 
 # Applicant Project
 Thanks for applying for a role with the ETV team at Music Choice!
