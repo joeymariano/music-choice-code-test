@@ -23,7 +23,7 @@ window.onload = function(){
 	  .then((showJson) => {
 	    let sortedShows = showJson.Items.map(
 	    	obj => new Show(obj.Ttla.Line2, obj.ImageUrls[0].ImageUrl,obj.Ttla.Line1, obj.TvRating) )
-	    populateHtml(sortedShows)
+	    	populateHtml(sortedShows)
 	  })
 }
 
